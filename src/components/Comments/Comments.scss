@@ -1,0 +1,231 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../App.scss' as *;
+
+.comments {
+    background-color: $white;
+    padding: 1.5rem 1rem 1.5rem 1rem; 
+    text-align: left;
+
+    @include tablet {
+        padding: 1rem 2.25rem 1.5rem 2.25rem;
+    }
+
+    @include desktop {
+        width: 100%;
+        padding: 1rem 0rem 1.5rem 0rem;
+    }
+
+
+    &__count {
+        @include text-subheader;
+        font-weight: 600;
+        color: $brainflix-black;
+        padding-bottom: 1rem;
+        
+
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__form-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: flex-start;
+        gap: 1rem;
+        border-bottom: 2px solid $mercury;
+        padding: 0 0 1rem 0rem;
+        width: 100%;
+
+        @include desktop {
+            padding: 0 0 1rem 1rem;
+        }
+    }
+
+    &__avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: $mercury;
+        margin-top: 1.5rem;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+            margin-top: 1.5rem;
+        }
+
+        @include tablet {
+            margin-right: 1rem;
+        }
+    }
+
+    &__form {
+        width: 100%;
+
+        @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__form-subheader {
+        @include text-label;
+        font-weight: 600;
+        color: $silver;
+        padding-bottom: .25rem;
+        font-size: .9375rem;
+
+        @include tablet {
+            width: 100%
+            }
+    }
+
+    &__form-input {
+        @include text-body;
+        height: 5rem;
+        width: 100%;
+        border-radius: .25rem;
+        border: 1px solid $mercury;
+        padding: .75rem .75rem .75rem .75rem;
+        margin-bottom: 1rem;
+        background-color: $alabaster;
+        resize: none;
+
+        @include tablet {
+            height: 3rem;
+            max-width: 70%;
+            resize: none;
+        }
+
+        @include desktop {
+            width: 72%;
+        }
+
+        &:active, &:focus {
+            outline: none;
+            border: 1px solid $brainflix-blue;
+        }
+    }
+
+    &__form-button {
+        @include text-section-header;
+        color: $white;
+        font-weight: 600;
+        font-size: .9375rem;
+        letter-spacing: .0156rem;
+        background-color: $brainflix-blue;
+        width: 100%;
+        height: 3rem;
+        border: none;
+        border-radius: .25rem;
+        display: flex;
+        align-items: center;
+        padding: .75rem .75rem .75rem .75rem;
+        gap: 5rem;
+
+        @include tablet {
+            @include text-body;
+            color: $white;
+            font-weight: 600;
+            font-size: .9375rem;
+            letter-spacing: .0156rem;
+            max-width: 10rem;
+            padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+            margin: 0 0 0 1rem;
+            gap: 1rem;
+        }
+
+        &:hover {
+            background-color: $brainflix-darkBlue;
+        }
+
+        &-img {
+            margin-right: auto;
+        }
+    
+        &-text {
+            margin-right: auto;
+        }
+    }
+}
+
+.old-comments {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-bottom: 2px solid $mercury;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+
+    &:last-of-type {
+        @include desktop {
+        border-bottom: none;
+        }
+    }
+
+    @include desktop {
+        width: 100%;
+        padding: 1.5rem 1.5rem 1.5rem 1rem;
+    }
+
+    &__avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: $mercury;
+        object-fit: cover;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__title-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0.5rem;
+    }
+
+    &__name {
+        @include text-body;
+        color: $brainflix-black;
+        font-weight: 600;
+    }
+
+    &__date {
+        @include text-body;
+        color: $silver;
+    }
+
+    &__text {
+        @include text-body;
+        color: $brainflix-black;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+}
+
+// provides red border to either comment input box when they fail validation
+.form__error {
+    border: 1px solid $error-red;
+}

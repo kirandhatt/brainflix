@@ -1,0 +1,31 @@
+// set primary colours //
+
+$brainflix-black: #323232; // primary text colour //
+
+$brainflix-blue: #0095FF; // primary CTA colour, active form field outline //
+
+$silver: #AFAFAF; // secondary text colour, text label colour //
+
+$white: #FFFFFF; // background colour, CTA text colour //
+
+// set secondary colours //
+
+$brainflix-darkBlack: #000000; // video player components //
+
+$brainflix-darkBlue: #0065AD; // CTA hover state colour //
+
+$mercury: #E1E1E1; // divider line, form field outline colour //
+
+$alabaster: #FAFAFA; // form field background colour //
+
+// set error state colour //
+
+$error-red: #D22D2D; // form field border in an error state //
+
+// define breakpoints //
+
+$min-breakpoint-tablet: 48rem;
+
+$min-breakpoint-desktop: 80rem;
+
+$max-width: 120rem;

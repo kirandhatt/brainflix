@@ -1,0 +1,108 @@
+@use './variables' as *;
+@use './typography' as *;
+
+// responsive design mixins //
+
+@mixin tablet {
+    @media screen and (min-width: $min-breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $min-breakpoint-desktop) {
+        @content;
+    }
+}
+
+// type kit mixins //
+
+// page header //
+
+@mixin text-header {
+    font-family: 'Avenir Next';
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: $brainflix-black;
+
+    @include tablet {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+    }
+
+    @include desktop {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+    }
+}
+
+// section header //
+
+@mixin text-section-header {
+    font-family: 'Avenir Next';
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $brainflix-black;
+}
+
+// subheader //
+
+@mixin text-subheader {
+    font-family: 'Avenir Next';
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+    color: $brainflix-black;
+
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+
+    @include desktop {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+}
+
+// body copy //
+
+@mixin text-body {
+    font-family: 'Avenir Next';
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    color: $brainflix-black;
+
+    @include tablet {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+
+    @include desktop {
+        font-size: .875rem;
+        line-height: 1.375rem;
+    }
+}
+
+// labels & buttons //
+
+@mixin text-label {
+    font-family: 'Avenir Next';
+    font-size: .625rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $brainflix-black;
+
+    @include tablet {
+        font-size: .75rem;
+    }
+
+    @include desktop {
+        font-size: .75rem;
+    }
+}

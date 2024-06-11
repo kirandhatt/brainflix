@@ -1,0 +1,163 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../App.scss' as *;
+
+.header-container {
+    background-color: $white;
+    padding: 1rem 1rem 1rem 1rem; 
+
+    @include tablet {
+        padding: 1rem 2.25rem 1rem 2.25rem;
+    }
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        }
+
+        @include desktop {
+            width: 80rem;
+            margin: 0 auto 0 auto;
+        }
+
+    &:nth-child(3) {
+        @include tablet {
+            order: 2;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        text-align: center;
+        padding: 0 0 1rem 0;
+
+        @include tablet {
+            margin-right: auto;
+            padding: 0 0 0 0;
+            text-align: left;
+            }
+
+        &-img {
+            height: 1.5rem;
+            width: 7.5rem;
+        }
+    }
+
+    &__search-container {
+        display: flex;
+        width: 85%;
+
+        @include tablet {
+            width: 100%;
+            }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        height: 2.5rem;
+        width: 100%;
+        border-radius: .25rem;
+        border: 1px solid $mercury;
+        padding: .75rem .75rem .75rem .75rem;
+        margin: 0 1rem 1rem 0;
+        background-color: $alabaster;
+
+        @include tablet {
+            margin: 0 1rem 0rem 0;
+            }
+
+        &-img {
+            margin-right: 0.5rem;
+        }
+
+        &-input {
+            @include text-body;
+            font-weight: 400;
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            background-color: $alabaster;
+        }
+    }
+
+    &__avatar {
+        width: 15%;
+        text-align: right;
+
+        @include tablet {
+            display: flex;
+            order: 2;
+            padding-left: 1.5rem;
+            }
+
+        &-img {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: $mercury;
+
+            @include tablet {
+                width: 2.5rem;
+                height: 2.5rem;
+                }
+        }
+    }
+
+    &__button-container {
+        width: 100%;
+
+        @include tablet {
+            width: 35%;
+            padding: 0 1rem 0 0rem;
+            }
+    }
+
+    &__button {
+        @include text-section-header;
+        color: $white;
+        font-weight: 600;
+        font-size: .9375rem;
+        letter-spacing: .0156rem;
+        background-color: $brainflix-blue;
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        border-radius: .25rem;
+        display: flex;
+        align-items: center;
+        padding: .75rem .75rem .75rem .75rem;
+
+        @include tablet {
+            @include text-body;
+            color: $white;
+            font-weight: 600;
+            font-size: .9375rem;
+            letter-spacing: .0156rem;
+            max-width: 10rem;
+            padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+            margin: 0 0 0 1rem;
+        }
+
+        &:hover {
+            background-color: $brainflix-darkBlue;
+        }
+
+        &-img {
+            margin-right: auto;
+        }
+    
+        &-text {
+            margin-right: auto;
+        }
+    }
+}

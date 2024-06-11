@@ -1,0 +1,42 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../App.scss' as *;
+
+.next-video {
+    background-color: $white;
+    padding: 0rem 1rem 1.5rem 1rem; 
+
+    @include tablet {
+        padding: 0rem 2.25rem 1.5rem 2.25rem;
+    }
+
+    @include desktop {
+        padding: 1.5rem 2.25rem 1.5rem 2.25rem;
+    }
+
+    &__title {
+        background-color: inherit;
+
+        &-text {
+            @include text-label;
+            font-weight: 600;
+            color: $silver;
+            padding-bottom: .25rem;
+            font-size: .9375rem;
+    
+            @include tablet {
+              width: 100%
+            }
+        }
+        
+    }
+}
+
+h4.next-video-list__title {
+    font-family: "Avenir Next";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    color: #323232;
+}
