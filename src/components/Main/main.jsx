@@ -1,4 +1,3 @@
-import React from 'react';
 import {useState} from 'react';
 import MainVideo from '../MainVideo/MainVideo';
 import videoDetails from '../../data/video-details.json';
@@ -6,7 +5,6 @@ import UnderVideo from '../UnderVideo/UnderVideo';
 
 export default function Main() {
 
-    const [videoData, setVideoData] = useState(videoDetails);
     const [currentVideo, setCurrentVideo] = useState(videoDetails[0]);
 
     function changeVideo(id) {

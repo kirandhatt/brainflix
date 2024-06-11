@@ -3,7 +3,7 @@ import './NextVideo.scss';
 import nextVideoList from "../../data/video-details.json"
 import Video from "../Video/Video"
 
-export default function NextVideo ({currentVideoID, changeMainVideo}) {
+export default function NextVideo ({currentVideoID, changeVideo}) {
     const nextVideoListFiltered = nextVideoList.filter((video) => {
         return video.id !== currentVideoID;
     })
@@ -17,7 +17,7 @@ export default function NextVideo ({currentVideoID, changeMainVideo}) {
                 <div>
                     {nextVideoListFiltered.map((video) => (
                         <Video
-                            changeMainVideo={changeMainVideo}
+                            changeVideo={changeVideo}
                             key={video.id}
                             id={video.id}
                             image={video.image}

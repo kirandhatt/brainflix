@@ -4,7 +4,7 @@ import Comments from '../Comments/Comments'
 import NextVideo from '../NextVideo/NextVideo'
 import MainVideoDetails from '../MainVideoDetails/MainVideoDetails'
 
-export default function UnderVideo ({currentVideoID, currentVideoDetails, changeMainVideo}) {
+export default function UnderVideo ({currentVideoID, currentVideoDetails, changeVideo}) {
     return (
         <>
             <section className='under-video'>
@@ -15,7 +15,7 @@ export default function UnderVideo ({currentVideoID, currentVideoDetails, change
                     </div>
                     <div className='under-video__right'>
                         <NextVideo
-                            changeMainVideo={changeMainVideo}
+                            changeVideo={changeVideo}
                             currentVideoID={currentVideoID}
                         />
                     </div>
