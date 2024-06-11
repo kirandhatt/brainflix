@@ -1,9 +1,19 @@
 import React from 'react'
 import "./Video.scss"
+import videoDetails from '../../data/video-details.json';
+import MainVideo from '../../components/MainVideo/MainVideo';
 
-export default function Video ({changeMainVideo, id, title, channel, image}) {
+export default function Video ({changeVideo, id, title, channel, image}) {
+    function changeVideo(id) {
+        const selectedVideo = videoDetails.find((video) => {
+            return video.id === id;
+        })
+
+        MainVideo(selectedVideo); 
+    }
+    
     const clickHandler = () => {
-        changeMainVideo(id);
+        changeVideo(id);
     };
 
     return (

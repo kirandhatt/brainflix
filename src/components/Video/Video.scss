@@ -33,6 +33,7 @@
 
     &__title {
         @include text-subheader;
+        font-weight: 600;
     }
 
     &__channel {
