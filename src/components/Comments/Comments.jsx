@@ -25,7 +25,7 @@ export default function CommentsInput ({currentVideoDetails}) {
                 {currentVideoDetails.comments.map((video) => (
                     <div className='old-comments' id={video.id} key={video.id}>
                         <div className='old-comments__left'>
-                            <object className='old-comments__avatar' src=''/>
+                            <div className='old-comments__avatar'></div>
                         </div>
                         <div className='old-comments__right'>
                             <div className='old-comments__title-container'>

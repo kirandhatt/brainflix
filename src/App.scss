@@ -1,1 +1,28 @@
-@use './styles/partials/global' as *;
+@use "./variables" as *;
+@use "./typography" as *;
+@use "./mixins" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+html, body {
+    padding: 0rem;
+    margin: 0rem;
+    background-color: $white;
+}
+
+h1, h2, h3, p {
+    margin: 0rem;
+}
+
+embed, iframe, object {
+    max-width: 100%;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}

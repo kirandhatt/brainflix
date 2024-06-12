@@ -16,7 +16,7 @@ export default function Main() {
     }
 
     return (
-        <>
+        <main>
             <MainVideo
                 currentVideo={currentVideo}
             />
@@ -25,6 +25,6 @@ export default function Main() {
                 currentVideoDetails={currentVideo}
                 changeVideo={changeVideo} 
             />
-        </>
+        </main>
     )
 }
