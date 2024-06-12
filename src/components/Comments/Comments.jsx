@@ -2,7 +2,7 @@ import React from 'react'
 import "./Comments.scss"
 import avatar from "../../assets/images/Mohan-muruge.jpg"
 import commentIcon from "../../assets/icons/add_comment.svg"
-import { formatDate } from '../FormatDate/FormatDate'
+import { formatDate } from '../../utilities/formatDate'
 
 export default function CommentsInput ({currentVideoDetails}) {
     const numberOfComments = currentVideoDetails.comments.length;

@@ -2,7 +2,7 @@ import React from 'react'
 import './MainVideoDetails.scss'
 import viewsIcon from "../../assets/icons/views.svg"
 import likesIcon from "../../assets/icons/likes.svg"
-import { formatDate } from '../FormatDate/FormatDate'
+import { formatDate } from '../../utilities/formatDate'
 
 export default function MainVideoDetails({currentVideoDetails}) {
     return (
