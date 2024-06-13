@@ -74,6 +74,7 @@
             font-weight: 500;
 
             @include tablet {
+                font-weight: 600;
                 padding: 0 2.25rem 0 0;
             }
         }
