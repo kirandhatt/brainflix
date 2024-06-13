@@ -15,6 +15,10 @@
         width: 40%;
     }
 
+    @include desktop {
+        width: 125%;
+    }
+
     &__left {
         width: 35%;
     }

@@ -25,6 +25,7 @@ export default function NavBar() {
                     <img className='header__button-img' src={uploadIcon} alt="upload icon"/>
                     <span className='header__button-text'>UPLOAD</span>
                 </button>
+            
             </div>
         </header>
     );

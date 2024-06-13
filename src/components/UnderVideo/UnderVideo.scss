@@ -5,7 +5,7 @@
 
 .under-video {
     @include desktop {
-        padding: 0rem 2.25rem 0rem 2.25rem;
+        padding: 0rem 5rem 0rem 5rem;
     }
 
     &__container {
@@ -22,7 +22,7 @@
             display: flex;
             flex-direction: column;
             width: 70%;
-            border-right: 2px solid $mercury;
+            border-right: .0625rem solid $mercury;
         }
     }
 

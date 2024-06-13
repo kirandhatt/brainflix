@@ -16,8 +16,8 @@ export default function CommentsInput ({currentVideoDetails}) {
                         <label className='comments__form-subheader' htmlFor="comment">JOIN THE CONVERSATION</label>
                         <textarea className='comments__form-input' name="comment" id="comment" placeholder='Add a new comment' maxLength="200"></textarea>
                         <button className='comments__form-button' type='submit' id='submit'>
-                            <img className='comments__form-img' src={commentIcon} alt="comment icon" />
-                            <span className='comments__form-text'>COMMENT</span>
+                            <img className='comments__form-img' id='button-img' src={commentIcon} alt="comment icon" />
+                            <span className='comments__form-text' id='button-text'>COMMENT</span>
                         </button>
                     </form>
                 </div>

@@ -75,12 +75,8 @@
         @include tablet {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         flex-wrap: wrap;
-        }
-
-        @include desktop {
-            padding-right: 1.5rem;
+        justify-content: space-between;
         }
     }
 
@@ -110,12 +106,12 @@
 
         @include tablet {
             height: 3rem;
-            max-width: 70%;
+            max-width: 65%;
             resize: none;
         }
 
         @include desktop {
-            width: 72%;
+            width: 65%;
         }
 
         &:active, &:focus {
@@ -136,8 +132,8 @@
         border-radius: .25rem;
         display: flex;
         align-items: center;
+        flex-wrap: nowrap;
         padding: .75rem .75rem .75rem .75rem;
-        gap: 5rem;
 
         @include tablet {
             @include text-body;
@@ -145,11 +141,15 @@
             font-weight: 600;
             font-size: .9375rem;
             letter-spacing: .0156rem;
-            width: 25%;
+            width: 32%;
             height: 100%;
             padding: .75rem .75rem .75rem .75rem;
             margin: 0 0 0 1rem;
-            gap: 1.5rem;
+        }
+
+        @include desktop {
+            width: 28%;
+            margin: 0 1.5rem 0 0;
         }
 
         &:hover {
@@ -164,6 +164,14 @@
             margin-right: auto;
         }
     }
+}
+
+#button-img {
+    margin-right: auto;
+}
+
+#button-text {
+    margin-right: auto;
 }
 
 .old-comments {
