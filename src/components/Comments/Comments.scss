@@ -5,24 +5,25 @@
 
 .comments {
     background-color: $white;
-    padding: 1.5rem 1rem 1.5rem 1rem; 
+    padding: 24px 16px 24px 16px; 
     text-align: left;
 
     @include tablet {
-        padding: 1rem 2.25rem 1.5rem 2.25rem;
+        padding: 16px 36px 24px 36px;
     }
 
     @include desktop {
         width: 100%;
-        padding: 1rem 0rem 1.5rem 0rem;
+        padding: 16px 0px 24px 0px;
     }
 
 
     &__count {
         @include text-subheader;
-        font-weight: 600;
+        font-weight: 550;
+        font-size: .9375rem;
         color: $brainflix-black;
-        padding-bottom: 1rem;
+        padding-bottom: 16px;
         
 
         @include desktop {
@@ -35,32 +36,32 @@
         flex-direction: row;
         justify-content: stretch;
         align-items: flex-start;
-        gap: 1rem;
-        border-bottom: 2px solid $mercury;
-        padding: 0 0 1rem 0rem;
+        gap: 16px;
+        border-bottom: 1px solid $mercury;
+        padding: 0 0 16px 0px;
         width: 100%;
 
         @include desktop {
-            padding: 0 0 1rem 1rem;
+            padding: 0 0 16px 16px;
         }
     }
 
     &__avatar {
-        width: 2rem;
-        height: 2rem;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         object-fit: cover;
         background-color: $mercury;
-        margin-top: 1.5rem;
+        margin-top: 24px;
 
         @include tablet {
-            width: 3rem;
-            height: 3rem;
-            margin-top: 1.5rem;
+            width: 48px;
+            height: 48px;
+            margin-top: 24px;
         }
 
         @include tablet {
-            margin-right: 1rem;
+            margin-right: 16px;
         }
     }
 
@@ -75,16 +76,16 @@
         }
 
         @include desktop {
-            padding-right: 1.5rem;
+            padding-right: 24px;
         }
     }
 
     &__form-subheader {
         @include text-label;
-        font-weight: 600;
+        font-weight: 550;
         color: $silver;
-        padding-bottom: .25rem;
-        font-size: .9375rem;
+        margin-bottom: 4px;
+        font-size: 15px;
 
         @include tablet {
             width: 100%
@@ -93,17 +94,18 @@
 
     &__form-input {
         @include text-body;
-        height: 5rem;
+        color: $brainflix-darkBlack;
+        height: 96px;
         width: 100%;
-        border-radius: .25rem;
-        border: 1px solid $mercury;
-        padding: .75rem .75rem .75rem .75rem;
-        margin-bottom: 1rem;
+        border-radius: 4px;
+        border: .0625rem solid $mercury;
+        padding: 12px 12px 12px 12px;
+        margin-bottom: 16px;
         background-color: $alabaster;
         resize: none;
 
         @include tablet {
-            height: 3rem;
+            height: 48px;
             max-width: 70%;
             resize: none;
         }
@@ -114,7 +116,7 @@
 
         &:active, &:focus {
             outline: none;
-            border: 1px solid $brainflix-blue;
+            border: .0625rem solid $brainflix-blue;
         }
     }
 
@@ -122,28 +124,27 @@
         @include text-section-header;
         color: $white;
         font-weight: 600;
-        font-size: .9375rem;
-        letter-spacing: .0156rem;
+        font-size: 15px;
+        letter-spacing: .2496px;
         background-color: $brainflix-blue;
         width: 100%;
-        height: 3rem;
         border: none;
-        border-radius: .25rem;
+        border-radius: 4px;
         display: flex;
         align-items: center;
-        padding: .75rem .75rem .75rem .75rem;
-        gap: 5rem;
+        padding: 12px 12px 12px 12px;
+        gap: 80px;
 
         @include tablet {
             @include text-body;
             color: $white;
             font-weight: 600;
-            font-size: .9375rem;
-            letter-spacing: .0156rem;
-            max-width: 10rem;
-            padding: 0.75rem 0.75rem 0.75rem 0.75rem;
-            margin: 0 0 0 1rem;
-            gap: 1rem;
+            font-size: 15px;
+            letter-spacing: .2496px;
+            max-width: 160px;
+            padding: 12px 12px 12px 12px;
+            margin: 0 0 0 16px;
+            gap: 16px;
         }
 
         &:hover {
@@ -156,6 +157,8 @@
     
         &-text {
             margin-right: auto;
+            position: relative;
+            top: 16px;
         }
     }
 }
@@ -163,9 +166,9 @@
 .old-comments {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    border-bottom: 2px solid $mercury;
-    padding: 1.5rem 0rem 1.5rem 0rem;
+    gap: 16px;
+    border-bottom: 1px solid $mercury;
+    padding: 16px 0px 16px 0px;
 
     &:last-of-type {
         @include desktop {
@@ -175,20 +178,20 @@
 
     @include desktop {
         width: 100%;
-        padding: 1.5rem 1.5rem 1.5rem 1rem;
+        padding: 24px 24px 24px 16px;
     }
 
     &__avatar {
-        width: 2rem;
-        height: 2rem;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         background-color: $mercury;
         object-fit: cover;
 
         @include tablet {
-            width: 3rem;
-            height: 3rem;
-            margin-right: 1rem;
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
         }
     }
 
@@ -203,7 +206,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 0.5rem;
+        padding-bottom: 8px;
     }
 
     &__name {
@@ -227,5 +230,5 @@
 
 // provides red border to either comment input box when they fail validation
 .form__error {
-    border: 1px solid $error-red;
+    border: .0625rem solid $error-red;
 }

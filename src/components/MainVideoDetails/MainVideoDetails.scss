@@ -20,7 +20,7 @@
     }
 
         &__title-container {
-        border-bottom: 2px solid $mercury;
+        border-bottom: .0625rem solid $mercury;
 
         @include tablet {
             border-bottom: none;
@@ -31,7 +31,7 @@
         @include text-header;
         text-align: left;
         margin: 0 0 0 0;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1rem;
 
         @include tablet {
             padding-bottom: 0.5rem;
@@ -43,8 +43,8 @@
         color: $silver;
         display: flex;
         flex-direction: row;
-        border-bottom: 2px solid $mercury;
-        padding: 1.5rem 0rem 1.5rem 0rem; 
+        border-bottom: .0625rem solid $mercury;
+        padding: 1rem 0rem 1rem 0rem; 
 
         @include tablet {
             padding: 0em 0rem 0.5rem 0rem; 
@@ -71,7 +71,7 @@
         &-channel {
             @include text-subheader;
             padding-bottom: 1rem;
-            font-weight: 600;
+            font-weight: 500;
 
             @include tablet {
                 padding: 0 2.25rem 0 0;
