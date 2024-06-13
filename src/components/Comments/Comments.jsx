@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Comments.scss"
 import avatar from "../../assets/images/Mohan-muruge.jpg"
 import commentIcon from "../../assets/icons/add_comment.svg"

@@ -1,4 +1,3 @@
-import React from 'react';
 import './NextVideo.scss';
 import nextVideoList from "../../data/video-details.json"
 import Video from "../Video/Video"

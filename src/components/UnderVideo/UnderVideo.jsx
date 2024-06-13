@@ -1,4 +1,3 @@
-import React from 'react'
 import './UnderVideo.scss'
 import Comments from '../Comments/Comments'
 import NextVideo from '../NextVideo/NextVideo'

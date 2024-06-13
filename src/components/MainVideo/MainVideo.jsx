@@ -1,7 +1,14 @@
-import React from 'react'
 import './MainVideo.scss'
 
-export default function MainVideo({currentVideo}){
+export default function MainVideo({videoData}){
+
+    const {videoId} = useParams();
+
+    const currentVideo = videoData.find((video) => {
+        return video.id == ( videoId || videoData[0].id);
+    })
+
+
     return (
         <>
         <section className='main-video'>
