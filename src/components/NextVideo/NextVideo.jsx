@@ -1,9 +1,11 @@
 import './NextVideo.scss';
-import nextVideoList from "../../data/video-details.json"
 import Video from "../Video/Video"
+import { NavLink } from 'react-router-dom';
 
-export default function NextVideo ({currentVideoID, changeVideo}) {
-    const nextVideoListFiltered = nextVideoList.filter((video) => {
+export default function NextVideo ({videoData, currentVideoID, changeVideo}) {
+    
+    const videoList = videoData;
+    const nextVideoListFiltered = videoList.filter((video) => {
         return video.id !== currentVideoID;
     })
 
@@ -14,16 +16,18 @@ export default function NextVideo ({currentVideoID, changeVideo}) {
             </div>
             <div>
                 {nextVideoListFiltered.map((video) => (
-                    <Video
-                        changeVideo={changeVideo}
-                        key={video.id}
-                        id={video.id}
-                        image={video.image}
-                        title={video.title}
-                        channel={video.channel}
-                    />
+                    <NavLink to={`/${video.id}`} key={video.id}>
+                        <Video
+                            changeVideo={changeVideo}
+                            key={video.id}
+                            id={video.id}
+                            image={video.image}
+                            title={video.title}
+                            channel={video.channel}
+                        />
+                    </NavLink>   
                 ))}
             </div>
         </section>
-    )
+    );
 }

@@ -13,8 +13,8 @@ export default function NavBar() {
                 </div>
                 <form className='header__search-container' action="#">
                     <div className='header__search'>
-                    <img className='header__search-img' src={searchIcon} alt="search icon"/>
-                    <input className='header__search-input' type="text" placeholder='Search' />
+                        <img className='header__search-img' src={searchIcon} alt="search icon"/>
+                        <input className='header__search-input' type="text" placeholder='Search' />
                     </div>
                 </form>
                 <div className='header__avatar'>
@@ -24,7 +24,6 @@ export default function NavBar() {
                     <img className='header__button-img' src={uploadIcon} alt="upload icon"/>
                     <span className='header__button-text'>UPLOAD</span>
                 </button>
-            
             </div>
         </header>
     );
