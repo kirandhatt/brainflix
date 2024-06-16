@@ -20,7 +20,7 @@ export default function Upload() {
             </div>
             <form className="upload-form" id="upload-form" onSubmit={handleSubmit} action="#">
                 <div className="upload-form__thumbnail-container">
-                    <label className="upload-form__label upload-form__label--thumbail" htmlFor="thumbnail">VIDEO THUMBNAIL</label>
+                    <label className="upload-form__label upload-form__label--thumbnail" htmlFor="thumbnail">VIDEO THUMBNAIL</label>
                     <img className="upload-form__thumbnail" src={videoThumbnail} alt="runner in starting position on track" name="thumbnail" id="thumbnail"/>
                 </div>
                 <div className="upload-form__input-container">
@@ -34,10 +34,13 @@ export default function Upload() {
                         <img className="upload-form__publish-button-img" src={publishIcon} alt="publish icon"/>
                         <span className="upload-form__publish-button-text">PUBLISH</span>
                     </button>
-                </div>
-                <Link to="/">
-                    <span className="upload-form__cancel-text">CANCEL</span>
-                </Link>
+                    <button className="upload-form__cancel-button" type="button" id="cancel">
+                        <Link to="/">
+                        <img className="upload-form__cancel-button-img" src={publishIcon} alt="publish icon"/>
+                        <span className="upload-form__cancel-button-text">CANCEL</span>
+                        </Link> 
+                    </button>
+                </div> 
             </form>
         </main>
     );

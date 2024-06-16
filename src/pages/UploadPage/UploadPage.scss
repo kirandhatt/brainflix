@@ -1,0 +1,209 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../App.scss' as *;
+
+.upload {
+    background-color: $white;
+    border-top: .0625rem solid $mercury;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+
+    @include tablet {
+        padding: 1rem 2.25rem 1rem 2.25rem;
+    }
+
+    @include desktop {
+        width: 80rem;
+        margin: 0 auto;
+    }
+
+    &__title {
+        @include text-header;
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: $brainflix-black;
+        padding: 1rem 1rem 1.5rem 0rem;
+
+        @include tablet {
+            border-bottom: .0625rem solid $mercury;
+            font-size: 24px;
+        }
+    }
+}
+
+.upload-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__thumbnail-container {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: auto;
+        }
+
+        @include desktop {
+            width: 35%;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__label {
+        @include text-label;
+        font-weight: 550;
+        color: $silver;
+        font-size: .9375rem;
+
+        &--thumbnail {
+            @include tablet {
+               margin-top: 1.5rem;
+            }
+        }
+    }
+
+    &__thumbnail {
+        background-color: $mercury;
+        width: 100%;
+        height: auto;
+        border-radius: 0.25rem;
+        margin: 0.5rem 0rem;
+        object-fit: cover;
+
+        @include desktop {
+            height: 14rem;
+        }
+    }
+
+    &__input-container {
+        @include desktop {
+            width: 62%;
+        }
+    }
+
+    &__input {
+        @include text-body;
+        font-size: .9375rem;
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 0.25rem;
+        border: .0625rem solid $mercury;
+        padding: 0.75rem;
+        margin: 0.25rem 0rem 1rem;
+        background-color: $alabaster;
+
+        &:active, &:focus {
+            outline: none;
+            border: .0625rem solid $brainflix-blue;
+        }
+
+        &--textarea {
+            resize: none;
+            height: 6rem;
+
+            @include tablet {
+                margin-bottom: 1.5rem;
+            }
+
+            @include desktop {
+                height: 9.25rem;
+            }
+        }
+    }
+
+    &__button-container {
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            border-top: .0625rem solid $mercury;
+            padding-top: 1.5rem;
+        }
+
+        @include desktop {
+            width: 100%;
+        }
+    }
+
+    &__publish-button {
+        @include text-body;
+        color: $white;
+        font-weight: 550;
+        font-size: .9375rem;
+        letter-spacing: .0156rem;
+        background-color: $brainflix-blue;
+        width: 100%;
+        height: 3rem;
+        border: none;
+        border-radius: 0.25rem;
+        resize: none;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+
+        @include tablet {
+            width: 10rem;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            margin: 0 0 0 1rem;
+        }
+
+        &:hover {
+            background-color: $brainflix-darkBlue;
+        }
+
+        &-img {
+            margin-right: auto;
+        }
+
+        &-text {
+            margin-right: auto;
+        }
+    }
+
+    &__cancel-button {
+        @include text-body;
+        color: $brainflix-blue;
+        text-decoration: none;
+        font-weight: 550;
+        font-size: .9375rem;
+        letter-spacing: .0156rem;
+        background-color: $white;
+        width: 100%;
+        height: 3rem;
+        border: none;
+        border-radius: 0.25rem;
+        resize: none;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        margin: 2rem 0rem;
+
+        @include tablet {
+            font-weight: 550;
+            font-size: .9375rem;
+            width: 25%;
+            letter-spacing: .0156rem;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            margin: 0 0 0 1rem;
+        }
+
+        &:hover &:visited {
+            color: $brainflix-darkBlue;
+        }
+
+        &-img {
+            margin-right: auto;
+        }
+
+        &-text {
+            margin-right: auto;
+        }
+    }
+}
