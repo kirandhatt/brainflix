@@ -5,6 +5,7 @@
 
 .upload {
     background-color: $white;
+    width: 100%;
     border-top: .0625rem solid $mercury;
     padding: 1.5rem 1rem 1.5rem 1rem;
 
@@ -150,8 +151,8 @@
 
         @include tablet {
             width: 10rem;
-            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-            margin: 0 0 0 1rem;
+            padding: 0.75rem;
+            margin: 0 0 0 4rem;
         }
 
         &:hover {

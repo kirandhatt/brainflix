@@ -10,7 +10,7 @@ export default function NavBar() {
         <header className='header-container'>
             <div className='header'>
                 <div className='header__logo'>
-                    <Link to="/">
+                    <Link to="/" className="header__logo-img">
                         <img className='header__logo-img' src={logo} alt="BrainFlix Logo"/>
                     </Link>
                 </div>
@@ -23,12 +23,14 @@ export default function NavBar() {
                 <div className='header__avatar'>
                     <img className='header__avatar-img' src={avatar} alt="user avatar"/>
                 </div>
-                <button className='header__button'>
+                <div className="header__button-container">
                     <Link to="/upload">
+                    <button className='header__button'>
                         <img className='header__button-img' src={uploadIcon} alt="upload icon"/>
                         <span className='header__button-text'>UPLOAD</span>
+                    </button>
                     </Link>
-                </button>
+                </div>  
             </div>
         </header>
     );

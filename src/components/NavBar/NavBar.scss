@@ -78,6 +78,7 @@
 
         @include tablet {
             margin: 0 1rem 0rem 0;
+            height: 100%;
             }
 
         &-img {
@@ -99,14 +100,14 @@
         text-align: right;
 
         @include tablet {
-            width: 20%;
+            width: 25%;
             display: flex;
             order: 2;
             padding-left: 1.5rem;
         }
 
         @include desktop {
-            width: 10%;
+            width: 20%;
             margin: 0rem;
         }
 
@@ -120,7 +121,21 @@
             @include tablet {
                 width: 2.75rem;
                 height: 2.75rem;
-                }
+            }
+
+            @include desktop {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+        }
+    }
+
+    &__button-container {
+        width: 100%;
+
+        @include tablet {
+            width: 35%;
+            padding: 0rem 1rem 0rem 0rem;
         }
     }
 
@@ -132,20 +147,22 @@
         letter-spacing: .0156rem;
         background-color: $brainflix-blue;
         width: 100%;
+        min-height: 2.5rem;
         border: none;
         border-radius: .25rem;
         display: flex;
         align-items: center;
-        padding: .75rem .75rem .75rem .75rem;
+        flex-wrap: nowrap;
+        padding: .75rem;
 
         @include tablet {
             @include text-body;
             color: $white;
             font-weight: 600;
             font-size: .9375rem;
+            min-width: 10rem;
             letter-spacing: .0156rem;
-            width: 20rem;
-            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            padding: 0.75rem;
             margin: 0 0 0 1rem;
         }
 
