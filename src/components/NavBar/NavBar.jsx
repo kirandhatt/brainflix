@@ -23,12 +23,11 @@ export default function NavBar() {
                 <div className='header__avatar'>
                     <img className='header__avatar-img' src={avatar} alt="user avatar"/>
                 </div>
-                <Link to="/upload">
-                    <button className='header__button'>
-                        <img className='header__button-img' src={uploadIcon} alt="upload icon"/>
-                        <span className='header__button-text'>UPLOAD</span>
-                    </button>
-                </Link>
+                <button className='header__button'>
+                <Link to="/upload"></Link>
+                    <img className='header__button-img' src={uploadIcon} alt="upload icon"/>
+                    <span className='header__button-text'>UPLOAD</span>
+                </button>
             </div>
         </header>
     );
