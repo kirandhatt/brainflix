@@ -5,16 +5,16 @@
 
 .comments {
     background-color: $white;
-    padding: 24px 16px 24px 16px; 
+    padding: 1.5rem 1rem 1.5rem 1rem; 
     text-align: left;
 
     @include tablet {
-        padding: 16px 36px 24px 36px;
+        padding: 1rem 2.25rem 1.5rem 2.25rem;
     }
 
     @include desktop {
         width: 100%;
-        padding: 16px 0px 24px 0px;
+        padding: 1rem 0rem 1.5rem 0rem;
     }
 
 
@@ -40,13 +40,13 @@
         flex-direction: row;
         justify-content: stretch;
         align-items: flex-start;
-        gap: 16px;
-        border-bottom: 1px solid $mercury;
-        padding: 0 0 16px 0px;
+        gap: 1rem;
+        border-bottom: .0625rem solid $mercury;
+        padding: 0 0 1rem 0rem;
         width: 100%;
 
         @include desktop {
-            padding: 0 0 16px 16px;
+            padding: 0 0 1rem 1rem;
         }
     }
 
@@ -221,7 +221,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 8px;
+        padding-bottom: .5rem;
     }
 
     &__name {
@@ -243,7 +243,6 @@
     }
 }
 
-// provides red border to either comment input box when they fail validation
 .form__error {
     border: .0625rem solid $error-red;
 }

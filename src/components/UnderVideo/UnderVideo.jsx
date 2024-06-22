@@ -5,7 +5,7 @@ import MainVideoDetails from '../MainVideoDetails/MainVideoDetails'
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getVideoData } from '../../utilities/getVideoData';
-import { api_KEY, api_URL } from '../../utilities/const';
+import { api_URL } from '../../utilities/const';
 
 export default function UnderVideo ({currentVideoID, changeVideo, videoData}) {
 
@@ -15,7 +15,7 @@ export default function UnderVideo ({currentVideoID, changeVideo, videoData}) {
 
     useEffect(() => {
         const id = videoId || currentVideoID;
-        getVideoData(api_URL, api_KEY, id)
+        getVideoData(api_URL, id)
             .then((result) => {
                 setCurrentVideoData(result);
                 setCommentsData(result.comments)

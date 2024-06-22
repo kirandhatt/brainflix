@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import MainVideo from '../MainVideo/MainVideo';
 import UnderVideo from '../UnderVideo/UnderVideo';
 import axios from 'axios';
-import { api_KEY, api_URL } from '../../utilities/const';
+import { api_URL } from '../../utilities/const';
 import { useParams } from 'react-router-dom';
 
 export default function Main() {
@@ -12,7 +12,7 @@ export default function Main() {
     const {videoId} = useParams();
 
     useEffect(() => {
-        axios.get(`${api_URL}videos?api_key=${api_KEY}`)
+        axios.get(`${api_URL}videos`)
         .then((response) => {
             setVideoData(response.data);
             if (videoId) {
@@ -25,7 +25,7 @@ export default function Main() {
             }
         })
         .catch((error) => {
-        console.error('Error getting videos:', error.response ? error.response.data : error.message);
+            console.error('Error getting videos:', error.response ? error.response.data : error.message);
         });
     }, [videoId]);
 
@@ -40,16 +40,14 @@ export default function Main() {
     return (
         <>
             {currentVideo && (
-                <main>
-                    <MainVideo
-                        videoData={videoData}
-                    />
-                    <UnderVideo
-                        currentVideoID={currentVideo.id}
-                        videoData={videoData}
-                        changeVideo={changeVideo} 
-                    />
-                </main>
+                <MainVideo
+                    videoData={videoData}
+                />
+                <UnderVideo
+                    currentVideoID={currentVideo.id}
+                    videoData={videoData}
+                    changeVideo={changeVideo} 
+                />
             )}
         </>
     );
