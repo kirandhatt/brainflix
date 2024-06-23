@@ -16,7 +16,7 @@ export default function NextVideo ({videoData, currentVideoID, changeVideo}) {
             </div>
             <div>
                 {nextVideoListFiltered.map((video) => (
-                    <NavLink to={`videos/${video.id}`} key={video.id}>
+                    <NavLink to={`/videos/${video.id}`} key={video.id}>
                         <Video
                             changeVideo={changeVideo}
                             key={video.id}
