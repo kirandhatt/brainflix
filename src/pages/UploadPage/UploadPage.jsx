@@ -12,7 +12,6 @@ export default function Upload() {
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    // const [image, setImage] = useState(null);
     const [formError, setFormError] = useState("");
 
     const handleTitleField = (e) => {
@@ -22,11 +21,6 @@ export default function Upload() {
     const handleDescriptionField = (e) => {
         setDescription(e.target.value);
     };
-
-    // const handleImageUpload = (e) => {
-    //     const selectedFile = e.target.files[0];
-    //     setImage(selectedFile);
-    // };
 
     const checkInputs = () => {
         if (title === "") {
@@ -63,12 +57,7 @@ export default function Upload() {
             formData.append("title", title);
             formData.append("description", description);
 
-            if (image) {
-                formData.append("image", image, image.name);
-            }
-
-            axios
-                .post(`${api_URL}videos`, formData, {
+            axios.post(`${api_URL}videos`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
@@ -76,7 +65,6 @@ export default function Upload() {
                 .then((result) => {
                     setTitle("");
                     setDescription("");
-                    setImage(null);
                     const newVideoId = result.data.id;
                     navigate(`/videos/${newVideoId}`);
                 })
@@ -103,7 +91,7 @@ export default function Upload() {
                     <textarea className={`upload-form__input upload-form__input--textarea ${formError && formError.inputName === "description" ? "form__error" : ""}`} name="description" id="description" maxLength="400" placeholder="Add a description to your video" onChange={handleDescriptionField} value={description}></textarea>
                 </div>
                 <div className="upload-form__button-container">
-                    <button className="upload-form__publish-button" type="submit" id="submit">
+                    <button className="upload-form__publish-button" type="submit" id="submit" onClick={handleSubmit}>
                         <img className="upload-form__publish-button-img" src={publishIcon} alt="publish icon"/>
                         <span className="upload-form__publish-button-text">PUBLISH</span>
                     </button>
