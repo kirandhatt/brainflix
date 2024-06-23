@@ -40,14 +40,16 @@ export default function Main() {
     return (
         <>
             {currentVideo && (
-                <MainVideo
-                    videoData={videoData}
-                />
-                <UnderVideo
-                    currentVideoID={currentVideo.id}
-                    videoData={videoData}
-                    changeVideo={changeVideo} 
-                />
+                <main>
+                    <MainVideo
+                        videoData={videoData}
+                    />
+                    <UnderVideo
+                        currentVideoID={currentVideo.id}
+                        videoData={videoData}
+                        changeVideo={changeVideo} 
+                    />
+                </main>
             )}
         </>
     );

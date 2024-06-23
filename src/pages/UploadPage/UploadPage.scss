@@ -209,3 +209,7 @@
         }
     }
 }
+
+.form__error {
+    border: .0625rem solid $error-red;
+}
