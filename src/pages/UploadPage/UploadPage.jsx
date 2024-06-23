@@ -1,7 +1,7 @@
 import "./UploadPage.scss";
 import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { api_URL } from "../../utilities/const";
 import { useState } from "react";
@@ -33,7 +33,7 @@ export default function Upload() {
             return false;
         } else {
             setFormError({inputName: ""});
-            return true
+            return true;
         }
     };
 
@@ -45,7 +45,7 @@ export default function Upload() {
 
     const handleCancel = () => {
         const confirmCancel = window.confirm("Cancel video upload?");
-        if (confirm) {
+        if (confirmCancel) {
             navigate("/");
         }
     };
@@ -53,16 +53,20 @@ export default function Upload() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (isFormValid()) {
-            const formData = new FormData();
-            formData.append("title", title);
-            formData.append("description", description);
+            const formData = {
+                title: title,
+                description: description
+            };
+
+            console.log('Submitting form data:', formData);
 
             axios.post(`${api_URL}videos`, formData, {
                     headers: {
-                        "Content-Type": "multipart/form-data",
+                        "Content-Type": "application/json",
                     },
                 })
                 .then((result) => {
+                    console.log('Result:', result.data);
                     setTitle("");
                     setDescription("");
                     const newVideoId = result.data.id;
@@ -96,12 +100,10 @@ export default function Upload() {
                         <span className="upload-form__publish-button-text">PUBLISH</span>
                     </button>
                 <div>
-                    <Link to="/">
                     <button className="upload-form__cancel-button" type="button" id="cancel" onClick={handleCancel}>
                         <img className="upload-form__cancel-button-img" src={publishIcon} alt="publish icon"/>
                         <span className="upload-form__cancel-button-text">CANCEL</span>
                     </button>
-                    </Link> 
                 </div>
                 </div> 
             </form>
