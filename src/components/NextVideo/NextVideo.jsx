@@ -1,6 +1,7 @@
 import './NextVideo.scss';
 import Video from "../Video/Video"
 import { NavLink } from 'react-router-dom';
+import { api_URL } from '../../utilities/const';
 
 export default function NextVideo ({videoData, currentVideoID, changeVideo}) {
     
@@ -21,7 +22,7 @@ export default function NextVideo ({videoData, currentVideoID, changeVideo}) {
                             changeVideo={changeVideo}
                             key={video.id}
                             id={video.id}
-                            image={video.image}
+                            image={`${api_URL}${video.image}`}
                             title={video.title}
                             channel={video.channel}
                         />
