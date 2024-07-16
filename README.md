@@ -1,8 +1,7 @@
-# React + Vite
+# BrainFlix
+BrainFlix is a full-stack React App built with an Express.js backend. Users can click through a set of videos, view their meta information, and view the comments for that video. Photos are used in lieu of videos, as the main exercise of the project was to manage state and connect to your backend with read routes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack:
+* React.js
+* Express.js/Node.js
+* HTML/CSS/Sass/JavaScript
